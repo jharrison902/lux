@@ -8,10 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ArgumentParser.h"
+#import "LEngine.h"
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        /* Get arguments and set flags */
+        /* ArgumentParser will print out useful info as it goes */
+        ArgumentParser *parser = [[ArgumentParser alloc] init];
+        [parser parseArgs:argv withSizeOf:argc];
+        LEngine *runTime = [[LEngine alloc] init: parser];
+        [runTime run];
+
     }
     return 0;
 }
