@@ -11,6 +11,7 @@
 		3C3F001D1BEC2FDE004D7129 /* LEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F001C1BEC2FDE004D7129 /* LEngine.m */; };
 		3C3F001E1BEC3118004D7129 /* LEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F001B1BEC2CAA004D7129 /* LEngine.h */; };
 		3C3F00211BEC5F1D004D7129 /* Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F00201BEC5F1D004D7129 /* Symbol.m */; };
+		3C3F00241BEC69D8004D7129 /* Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F00231BEC69D8004D7129 /* Number.m */; };
 		3C6CDCA51BEB036500507495 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6CDCA41BEB036500507495 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		3C3F001C1BEC2FDE004D7129 /* LEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEngine.m; sourceTree = "<group>"; };
 		3C3F001F1BEC5F04004D7129 /* Symbol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
 		3C3F00201BEC5F1D004D7129 /* Symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Symbol.m; sourceTree = "<group>"; };
+		3C3F00231BEC69D8004D7129 /* Number.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Number.m; sourceTree = "<group>"; };
+		3C3F00251BEC69EC004D7129 /* Number.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Number.h; sourceTree = "<group>"; };
 		3C6CDCA11BEB036500507495 /* Lux */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lux; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6CDCA41BEB036500507495 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C6CDCAB1BEB039F00507495 /* properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = properties.plist; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				3C3F001A1BEC26D2004D7129 /* ArgumentParser.h */,
 				3C3F001B1BEC2CAA004D7129 /* LEngine.h */,
 				3C3F001C1BEC2FDE004D7129 /* LEngine.m */,
+				3C3F00231BEC69D8004D7129 /* Number.m */,
+				3C3F00251BEC69EC004D7129 /* Number.h */,
 				3C3F001F1BEC5F04004D7129 /* Symbol.h */,
 				3C3F00201BEC5F1D004D7129 /* Symbol.m */,
 			);
@@ -140,6 +145,7 @@
 				3C3F00211BEC5F1D004D7129 /* Symbol.m in Sources */,
 				3C3F001E1BEC3118004D7129 /* LEngine.h in Sources */,
 				3C3F001D1BEC2FDE004D7129 /* LEngine.m in Sources */,
+				3C3F00241BEC69D8004D7129 /* Number.m in Sources */,
 				3C3F00191BEC266F004D7129 /* ArgumentParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

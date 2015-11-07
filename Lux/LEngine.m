@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <stdio.h>
 #import "LEngine.h"
+#import "Number.h"
 
 @implementation LEngine
 -(id)init: (ArgumentParser*) args
@@ -34,8 +35,14 @@
         if([argumentParser isDebug]){
             NSLog(@"Number found! %@",name);
         }
+        NSNumberFormatter *format = [[NSNumberFormatter alloc] init];
+        [format setNumberStyle:NSNumberFormatterDecimalStyle];
         
+        Number *tmpNumber = [[Number alloc] init:name withValue:[format numberFromString:name]];
+        [symbolTable addObject:tmpNumber];
     }
+    
+    
     
 }
 -(void) registerSymbol:(NSString *)name andValue:(NSString *)value
@@ -228,6 +235,10 @@
         exit=true;
         return;
     }
+    
+    /* Handle operators */
+    
+    
     
     
 }

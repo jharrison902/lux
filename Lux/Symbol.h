@@ -19,6 +19,6 @@
     
 }
 
-
+-(id) init: (NSString *) str;
 @end
 #endif /* Symbol_h */
