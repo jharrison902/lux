@@ -14,6 +14,15 @@
     
 }
 
+-(id) init
+{
+    self = [super init];
+    name = @"";
+    value = [NSNumber numberWithFloat:0.0f];
+    return self;
+    
+}
+
 -(id) init: (NSString *) str withValue: (NSNumber *) num
 {
     self = [super init];
@@ -22,11 +31,5 @@
     return self;
 }
 
--(id) init
-{
-    self = [super init];
-    
-    return self;
-}
 
 @end

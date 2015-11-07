@@ -18,6 +18,7 @@
     self = [super init];
     argumentParser = args;
     symbolTable = [NSMutableArray array];
+    lastSymbol = [[Variable alloc] init];
     buffer = [[NSString alloc] init];
     exit = false;
     return self;
@@ -30,7 +31,8 @@
     
     /* determine if number */
     NSCharacterSet *numericCharacters = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-    if ([name rangeOfCharacterFromSet:numericCharacters].location==NSNotFound){
+    
+    if ([name rangeOfCharacterFromSet:numericCharacters].location==NSNotFound || [[name substringWithRange:NSMakeRange([name rangeOfCharacterFromSet:numericCharacters].location, 1)] isEqualToString:@"."]){
         /* Valid numeric */
         if([argumentParser isDebug]){
             NSLog(@"Number found! %@",name);
@@ -40,6 +42,19 @@
         
         Number *tmpNumber = [[Number alloc] init:name withValue:[format numberFromString:name]];
         [symbolTable addObject:tmpNumber];
+        
+        
+    }
+    
+    /* Variable declaration */
+    
+    else {
+        if ([argumentParser isDebug]) {
+            NSLog(@"Variable found %@", name);
+        }
+        Variable *tmpVariable = [[Variable alloc] init:name];
+        [symbolTable addObject:tmpVariable];
+        lastSymbol = tmpVariable;
     }
     
     
@@ -47,6 +62,13 @@
 }
 -(void) registerSymbol:(NSString *)name andValue:(NSString *)value
 {
+    
+}
+-(void) registerOperator:(NSString *)name
+{
+    
+}
+-(void) registerOperator:(NSString *) name andSymbol: (NSString *) value{
     
 }
 
@@ -86,6 +108,7 @@
                 [self registerSymbol:symbolBuffer];
                 [symbolBuffer setString:@""];
             }
+            
         }
         
         /* Addition operator */
